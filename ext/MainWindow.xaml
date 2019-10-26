@@ -1,0 +1,319 @@
+﻿<Window x:Class="AAMPCList.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AAMPCList"
+        Icon="/AmericanAxle.jpg"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="CanMinimize"
+        Background="LightBlue"
+        Closed="Window_closed"
+        mc:Ignorable="d"
+        Title="American Axle Manafacturing" Height="550" Width="800">
+    <Canvas Name="myInkCanvas">
+        <Image Source="10002174.jpg" Grid.ColumnSpan="2" Canvas.Left="-133" Canvas.Top="81" />
+        <Grid Name="G1" Height="581" Width="794">
+            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" Canvas.Top="57" Margin="0,87,10,70">
+                <Grid Name="Grid1" Width="756" Height="818" Background="Transparent" Canvas.Top="97">
+
+                    <Grid.ColumnDefinitions>
+
+                        <ColumnDefinition Width="80*" />
+
+                        <ColumnDefinition Width="10*" />
+
+                        <ColumnDefinition Width="80*" />
+
+                        <ColumnDefinition Width="10*" />
+
+                        <ColumnDefinition Width="80*" />
+
+                        <ColumnDefinition Width="10*" />
+
+                        <ColumnDefinition Width="80*" />
+
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="60"/>
+                    </Grid.RowDefinitions>
+
+                    <Button Grid.Column="0" Background="Transparent" BorderBrush="White" Name="AddB" BorderThickness="3" Click="btnBorder_Click0">
+                        <Grid Height="64" Width="88">
+                            <Image  Source="/Plus.png" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,-2,8,0" Height="66" Width="74" RenderTransformOrigin="0.48,0.772"/>
+                            <!--TextBlock x:Name="Text3" FontSize="10" TextWrapping="Wrap" Foreground="White" Margin="3,14,1,-37" Visibility="Visible" FontWeight="Bold" RenderTransformOrigin="0.5,0.5" Grid.Row="3" Text="Directory"></-->
+                        </Grid>
+                    </Button>
+                    <Grid Name="GridPlex" Grid.Column="3" Visibility="Collapsed">
+                        <Button Background="White" ToolTip="Plex" BorderBrush="Black" Name="Plex" BorderThickness="3" Click="btnBorder_Click1">
+                            <Grid Height="64" Width="88">
+                                <Image  Source="/Plex.png" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,-2,8,0" Height="66" Width="74" RenderTransformOrigin="0.48,0.772"/>
+                                <!--TextBlock x:Name="Text3" FontSize="10" TextWrapping="Wrap" Foreground="White" Margin="3,14,1,-37" Visibility="Visible" FontWeight="Bold" RenderTransformOrigin="0.5,0.5" Grid.Row="3" Text="Directory"></-->
+                            </Grid>
+                        </Button>
+                        <Button Name="PlexDel" ToolTip="Delete" Click="Plex_Del" Background="Transparent" BorderThickness="3" Foreground="Red" FontSize="15" BorderBrush="Red" Visibility="Collapsed" Margin="0,0,0,72" FontWeight="Bold">Delete</Button>
+                        <Button Name="PlexMove" ToolTip="Move" Click="Plex_Move" Background="Transparent" BorderThickness="3" Foreground="Red" FontSize="15" BorderBrush="Red" Visibility="Collapsed" Margin="0,72,0,0" FontWeight="Bold">Move</Button>
+                        <Button Name="PlexGreen" ToolTip="Swap" Click="Plex_Move" Background="Transparent" BorderThickness="5" BorderBrush="SpringGreen" Visibility="Collapsed"></Button>
+                        <Border Name="PlexRed" Background="Transparent" BorderBrush="Red" BorderThickness="5" Visibility="Collapsed"></Border>
+                    </Grid>
+                    <Grid Name="GridWork" Grid.Column="3" Visibility="Collapsed">
+                        <Button ToolTip="Workday" Background="White" BorderBrush="Black" Name="Workday" BorderThickness="3" Click="btnBorder_Click2">
+                            <Grid Height="64" Width="88">
+                                <Image  Source="/workday.png" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,-2,8,0" Height="66" Width="74" RenderTransformOrigin="0.48,0.772"/>
+                                <!--TextBlock x:Name="Text3" FontSize="10" TextWrapping="Wrap" Foreground="White" Margin="3,14,1,-37" Visibility="Visible" FontWeight="Bold" RenderTransformOrigin="0.5,0.5" Grid.Row="3" Text="Directory"></-->
+                            </Grid>
+                        </Button>
+                        <Button Name="WorkDel" ToolTip="Delete" Click="Work_Del" Background="Transparent" BorderThickness="3" Foreground="Red" FontSize="15" BorderBrush="Red" Visibility="Collapsed" Margin="0,0,0,72" FontWeight="Bold">Delete</Button>
+                        <Button Name="WorkMove" ToolTip="Move" Click="Work_Move" Background="Transparent" BorderThickness="3" Foreground="Red" FontSize="15" BorderBrush="Red" Visibility="Collapsed" Margin="0,72,0,0" FontWeight="Bold">Move</Button>
+                        <Button Name="WorkGreen" ToolTip="Swap" Click="Work_Move" Background="Transparent" BorderThickness="5" BorderBrush="SpringGreen" Visibility="Collapsed"></Button>
+                        <Border Name="WorkRed" BorderBrush="Red" Background="Transparent" BorderThickness="5" Visibility="Collapsed"></Border>
+                    </Grid>
+                    <Grid Name="GridPLM" Grid.Column="3" Visibility="Collapsed">
+                        <Button Background="White" BorderBrush="Black" Name="PLM" BorderThickness="3" Click="btnBorder_Click3" ToolTip="PLM">
+                            <Grid Height="64" Width="88">
+                                <Image  Source="/PLM.png" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="-3,-18,0,-16" Height="98" Width="91" RenderTransformOrigin="0.48,0.772">
+                                </Image>
+                                <!--TextBlock x:Name="Text3" FontSize="10" TextWrapping="Wrap" Foreground="White" Margin="3,14,1,-37" Visibility="Visible" FontWeight="Bold" RenderTransformOrigin="0.5,0.5" Grid.Row="3" Text="Directory"></-->
+                            </Grid>
+                        </Button>
+                        <Button Name="PLMDel" ToolTip="Delete" Click="PLM_Del" Background="Transparent" BorderThickness="3" Foreground="Red" FontSize="15" BorderBrush="Red" Visibility="Collapsed" Margin="0,0,0,72" FontWeight="Bold">Delete</Button>
+                        <Button Name="PLMMove" ToolTip="Move" Click="PLM_Move" Background="Transparent" BorderThickness="3" Foreground="Red" FontSize="15" BorderBrush="Red" Visibility="Collapsed" Margin="0,72,0,0" FontWeight="Bold">Move</Button>
+                        <Button Name="PLMGreen" ToolTip="Swap" Click="PLM_Move" Background="Transparent" BorderThickness="5" BorderBrush="SpringGreen" Visibility="Collapsed"></Button>
+                        <Border Name="PLMRed" BorderBrush="Red" Background="Transparent" BorderThickness="5" Visibility="Collapsed"></Border>
+                    </Grid>
+                    <Grid Name="GridADP" Grid.Column="3" Visibility="Collapsed">
+                        <Button Background="White" BorderBrush="Black" Name="ADP" BorderThickness="3" Click="btnBorder_Click5" Margin="0,0,1,0" ToolTip="ADP">
+                            <Grid Height="64" Width="88">
+                                <Image  Source="/ADP.png" Visibility="Visible" HorizontalAlignment="Left" Stretch="UniformToFill" VerticalAlignment="Top" Margin="-1,10,0,0" Height="44" Width="88" RenderTransformOrigin="0.431,0.527"/>
+                                <!--TextBlock x:Name="Text3" FontSize="10" TextWrapping="Wrap" Foreground="White" Margin="3,14,1,-37" Visibility="Visible" FontWeight="Bold" RenderTransformOrigin="0.5,0.5" Grid.Row="3" Text="Directory"></-->
+                            </Grid>
+                        </Button>
+                        <Button Name="ADPDel" ToolTip="Delete" Click="ADP_Del" Background="Transparent" BorderThickness="3" Foreground="Red" FontSize="15" BorderBrush="Red" Visibility="Collapsed" Margin="0,0,0,72" FontWeight="Bold">Delete</Button>
+                        <Button Name="ADPMove" ToolTip="Move" Click="ADP_Move" Background="Transparent" BorderThickness="3" Foreground="Red" FontSize="15" BorderBrush="Red" Visibility="Collapsed" Margin="0,72,0,0" FontWeight="Bold">Move</Button>
+                        <Button Name="ADPGreen" ToolTip="Swap" Click="ADP_Move" Background="Transparent" BorderThickness="5" BorderBrush="SpringGreen" Visibility="Collapsed"></Button>
+                        <Border Name="ADPRed" BorderBrush="Red" Background="Transparent" BorderThickness="5" Visibility="Collapsed"></Border>
+                    </Grid>
+                    <Grid Name="GridSelf" Grid.Column="3" Visibility="Collapsed">
+                        <Button Background="White" BorderBrush="Black" Name="SelfService" BorderThickness="3" Click="btnBorder_Click4" ToolTip="Self Service" RenderTransformOrigin="0.5,0.5">
+                            <Grid Height="64" Width="88">
+                                <Image  Source="/AmericanAxle.jpg" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="20,5,0,12" Height="47" Width="52" RenderTransformOrigin="0.48,0.772"/>
+                                <TextBlock Name="SelfText" Visibility="Visible" Margin="-24,57,-29,-21" FontWeight="Bold" FontSize="25"><Run Text="Self "/><Run Text="Service"/></TextBlock>
+                                <!--TextBlock x:Name="Text3" FontSize="10" TextWrapping="Wrap" Foreground="White" Margin="3,14,1,-37" Visibility="Visible" FontWeight="Bold" RenderTransformOrigin="0.5,0.5" Grid.Row="3" Text="Directory"></-->
+                            </Grid>
+                        </Button>
+                        <Button Name="SelfDel" ToolTip="Delete" Click="Self_Del" Background="Transparent" BorderThickness="3" Foreground="Red" FontSize="15" BorderBrush="Red" Visibility="Collapsed" Margin="0,0,0,72" FontWeight="Bold">Delete</Button>
+                        <Button Name="SelfMove" ToolTip="Move" Click="Self_Move" Background="Transparent" BorderThickness="3" Foreground="Red" FontSize="15" BorderBrush="Red" Visibility="Collapsed" Margin="0,72,0,0" FontWeight="Bold">Move</Button>
+                        <Button Name="SelfGreen" ToolTip="Swap" Click="Self_Move" Background="Transparent" BorderThickness="5" BorderBrush="SpringGreen" Visibility="Collapsed"></Button>
+                        <Border Name="SelfRed" BorderBrush="Red" Background="Transparent" BorderThickness="5" Visibility="Collapsed"></Border>
+                    </Grid>
+                    <Grid Name="GridOracle" Grid.Column="3" Visibility="Collapsed">
+                        <Button Background="White" BorderBrush="Black" Name="Oracle" BorderThickness="3" Click="btnBorder_Click6" ToolTip="Oracle R12">
+                            <Grid Height="64" Width="88">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="63*"/>
+                                    <ColumnDefinition Width="25*"/>
+                                </Grid.ColumnDefinitions>
+                                <Image  Source="/oracle.png" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="1,-9,-1,-9" Height="82" Width="88" RenderTransformOrigin="0.48,0.772" Grid.ColumnSpan="2"/>
+                                <!--TextBlock x:Name="Text3" FontSize="10" TextWrapping="Wrap" Foreground="White" Margin="3,14,1,-37" Visibility="Visible" FontWeight="Bold" RenderTransformOrigin="0.5,0.5" Grid.Row="3" Text="Directory"></-->
+                            </Grid>
+                        </Button>
+                        <Button Name="OraDel" ToolTip="Delete" Click="Ora_Del" Background="Transparent" BorderThickness="3" Foreground="Red" FontSize="15" BorderBrush="Red" Visibility="Collapsed" Margin="0,0,0,72" FontWeight="Bold">Delete</Button>
+                        <Button Name="OraMove" ToolTip="Move" Click="Ora_Move" Background="Transparent" BorderThickness="3" Foreground="Red" FontSize="15" BorderBrush="Red" Visibility="Collapsed" Margin="0,72,0,0" FontWeight="Bold">Move</Button>
+                        <Button Name="OraGreen" ToolTip="Swap" Click="Ora_Move" Background="Transparent" BorderThickness="5" BorderBrush="SpringGreen" Visibility="Collapsed"></Button>
+                        <Border Name="OraRed" BorderBrush="Red" Background="Transparent" BorderThickness="5" Visibility="Collapsed"></Border>
+                    </Grid>
+                    <Grid Name="GridOffice" Grid.Column="3" Visibility="Collapsed">
+                        <Button Background="White" BorderBrush="Black" Name="Office" BorderThickness="3" Click="btnBorder_Click8" ToolTip="Microsoft Office">
+                            <Grid Height="64" Width="88">
+                                <Image  Source="/office.png" HorizontalAlignment="Left" VerticalAlignment="Center" Height="54" Width="103" RenderTransformOrigin="0.48,0.772" Margin="-7,3,-8,7"/>
+                                <!--TextBlock x:Name="Text3" FontSize="10" TextWrapping="Wrap" Foreground="White" Margin="3,14,1,-37" Visibility="Visible" FontWeight="Bold" RenderTransformOrigin="0.5,0.5" Grid.Row="3" Text="Directory"></-->
+                            </Grid>
+                        </Button>
+                        <Button Name="OfficeDel" ToolTip="Delete" Click="Office_Del" Background="Transparent" BorderThickness="3" Foreground="Red" FontSize="15" BorderBrush="Red" Visibility="Collapsed" Margin="0,0,0,72" FontWeight="Bold">Delete</Button>
+                        <Button Name="OfficeMove" ToolTip="Move" Click="Office_Move" Background="Transparent" BorderThickness="3" Foreground="Red" FontSize="15" BorderBrush="Red" Visibility="Collapsed" Margin="0,72,0,0" FontWeight="Bold">Move</Button>
+                        <Button Name="OfficeGreen" ToolTip="Swap" Click="Office_Move" Background="Transparent" BorderThickness="5" BorderBrush="SpringGreen" Visibility="Collapsed"></Button>
+                        <Border Name="OfficeRed" BorderBrush="Red" Background="Transparent" BorderThickness="5" Visibility="Collapsed"></Border>
+                    </Grid>
+                    <Grid Name="GridInstall" Grid.Column="3" Visibility="Collapsed">
+                        <Button Background="White" BorderBrush="Black" Name="Install" BorderThickness="3" Click="btnBorder_Click7" ToolTip="Installer">
+                            <Grid Height="64" Width="88">
+                                <Image  Source="/installer.png" HorizontalAlignment="Left" VerticalAlignment="Center" Height="54" Width="68" RenderTransformOrigin="0.48,0.772" Margin="21,6,-1,4"/>
+                                <!--TextBlock x:Name="Text3" FontSize="10" TextWrapping="Wrap" Foreground="White" Margin="3,14,1,-37" Visibility="Visible" FontWeight="Bold" RenderTransformOrigin="0.5,0.5" Grid.Row="3" Text="Directory"></-->
+                            </Grid>
+                        </Button>
+                        <Button Name="InstDel" ToolTip="Delete" Click="Inst_Del" Background="Transparent" BorderThickness="3" Foreground="Red" FontSize="15" BorderBrush="Red" Visibility="Collapsed" Margin="0,0,0,72" FontWeight="Bold">Delete</Button>
+                        <Button Name="InstMove" ToolTip="Move" Click="Inst_Move" Background="Transparent" BorderThickness="3" Foreground="Red" FontSize="15" BorderBrush="Red" Visibility="Collapsed" Margin="0,72,0,0" FontWeight="Bold">Move</Button>
+                        <Button Name="InstGreen" ToolTip="Swap" Click="Inst_Move" Background="Transparent" BorderThickness="5" BorderBrush="SpringGreen" Visibility="Collapsed"></Button>
+                        <Border Name="InstRed" BorderBrush="Red" Background="Transparent" BorderThickness="5" Visibility="Collapsed"></Border>
+                    </Grid>
+                    <Grid Name="GridVisual" Grid.Column="3" Visibility="Collapsed">
+                        <Button Background="White" BorderBrush="Black" Name="Visual" BorderThickness="3" Click="Visual_Click" ToolTip="Visual Studio">
+                            <Grid Height="64" Width="88">
+                                <Image  Source="/visual.png" HorizontalAlignment="Left" VerticalAlignment="Center" Height="62" Width="131" RenderTransformOrigin="0.48,0.772" Margin="-22,0,-21,2"/>
+                                <!--TextBlock x:Name="Text3" FontSize="10" TextWrapping="Wrap" Foreground="White" Margin="3,14,1,-37" Visibility="Visible" FontWeight="Bold" RenderTransformOrigin="0.5,0.5" Grid.Row="3" Text="Directory"></-->
+                            </Grid>
+                        </Button>
+                        <Button Name="VisualDel" ToolTip="Delete" Click="Vis_Del" Background="Transparent" BorderThickness="3" Foreground="Red" FontSize="15" BorderBrush="Red" Visibility="Collapsed" Margin="0,0,0,72" FontWeight="Bold">Delete</Button>
+                        <Button Name="VisualMove" ToolTip="Move" Click="Vis_Move" Background="Transparent" BorderThickness="3" Foreground="Red" FontSize="15" BorderBrush="Red" Visibility="Collapsed" Margin="0,72,0,0" FontWeight="Bold">Move</Button>
+                        <Button Name="VisualGreen" ToolTip="Swap" Click="Vis_Move" Background="Transparent" BorderThickness="5" BorderBrush="SpringGreen" Visibility="Collapsed"></Button>
+                        <Border Name="VisualRed" BorderBrush="Red" Background="Transparent" BorderThickness="5" Visibility="Collapsed"></Border>
+                    </Grid>
+                    <Grid Name="GridCalculator" Grid.Column="3" Visibility="Collapsed">
+                        <Button Background="White" BorderBrush="Black" Name="Calculator" BorderThickness="3" Click="Calc_Click" ToolTip="Calculator">
+                            <Grid Height="64" Width="88">
+                                <Image  Source="/calc.png" HorizontalAlignment="Left" VerticalAlignment="Center" Height="82" Width="154" RenderTransformOrigin="0.48,0.772" Margin="-28,-10,-38,-8"/>
+                                <!--TextBlock x:Name="Text3" FontSize="10" TextWrapping="Wrap" Foreground="White" Margin="3,14,1,-37" Visibility="Visible" FontWeight="Bold" RenderTransformOrigin="0.5,0.5" Grid.Row="3" Text="Directory"></-->
+                            </Grid>
+                        </Button>
+                        <Button Name="CalcDel" ToolTip="Delete" Click="Calc_Del" Background="Transparent" BorderThickness="3" Foreground="Red" FontSize="15" BorderBrush="Red" Visibility="Collapsed" Margin="0,0,0,72" FontWeight="Bold">Delete</Button>
+                        <Button Name="CalcMove" ToolTip="Move" Click="Calc_Move" Background="Transparent" BorderThickness="3" Foreground="Red" FontSize="15" BorderBrush="Red" Visibility="Collapsed" Margin="0,72,0,0" FontWeight="Bold">Move</Button>
+                        <Button Name="CalcGreen" ToolTip="Swap" Click="Calc_Move" Background="Transparent" BorderThickness="5" BorderBrush="SpringGreen" Visibility="Collapsed"></Button>
+                        <Border Name="CalcRed" BorderBrush="Red" Background="Transparent" BorderThickness="5" Visibility="Collapsed"></Border>
+                    </Grid>
+                    <Grid Name="GridNotepad" Grid.Column="3" Visibility="Collapsed">
+                        <Button Background="White" BorderBrush="Black" Name="Notepad" BorderThickness="3" Click="Note_Click" ToolTip="Notepad">
+                            <Grid Height="64" Width="88">
+                                <Image  Source="/notepad.png" HorizontalAlignment="Left" VerticalAlignment="Center" Height="82" Width="61" RenderTransformOrigin="0.48,0.772" Margin="12,-12,0,-6"/>
+                                <!--TextBlock x:Name="Text3" FontSize="10" TextWrapping="Wrap" Foreground="White" Margin="3,14,1,-37" Visibility="Visible" FontWeight="Bold" RenderTransformOrigin="0.5,0.5" Grid.Row="3" Text="Directory"></-->
+                            </Grid>
+                        </Button>
+                        <Button Name="NoteDel" ToolTip="Delete" Click="Note_Del" Background="Transparent" BorderThickness="3" Foreground="Red" FontSize="15" BorderBrush="Red" Visibility="Collapsed" Margin="0,0,0,72" FontWeight="Bold">Delete</Button>
+                        <Button Name="NoteMove" ToolTip="Move" Click="Note_Move" Background="Transparent" BorderThickness="3" Foreground="Red" FontSize="15" BorderBrush="Red" Visibility="Collapsed" Margin="0,72,0,0" FontWeight="Bold">Move</Button>
+                        <Button Name="NoteGreen" ToolTip="Swap" Click="Note_Move" Background="Transparent" BorderThickness="5" BorderBrush="SpringGreen" Visibility="Collapsed"></Button>
+                        <Border Name="NoteRed" BorderBrush="Red" Background="Transparent" BorderThickness="5" Visibility="Collapsed"></Border>
+                    </Grid>
+                    <Grid Name="GridChrome" Grid.Column="3" Visibility="Collapsed">
+                        <Button Background="White" BorderBrush="Black" Name="Chrome" BorderThickness="3" Click="Chrome_Click" ToolTip="Chrome">
+                            <Grid Height="64" Width="88">
+                                <Image  Source="/chrome.png" HorizontalAlignment="Left" VerticalAlignment="Center" Height="82" Width="61" RenderTransformOrigin="0.48,0.772" Margin="15,-11,0,-7"/>
+                                <!--TextBlock x:Name="Text3" FontSize="10" TextWrapping="Wrap" Foreground="White" Margin="3,14,1,-37" Visibility="Visible" FontWeight="Bold" RenderTransformOrigin="0.5,0.5" Grid.Row="3" Text="Directory"></-->
+                            </Grid>
+                        </Button>
+                        <Button Name="ChromeDel" ToolTip="Delete" Click="Chrome_Del" Background="Transparent" BorderThickness="3" Foreground="Red" FontSize="15" BorderBrush="Red" Visibility="Collapsed" Margin="0,0,0,72" FontWeight="Bold">Delete</Button>
+                        <Button Name="ChromeMove" ToolTip="Move" Click="Chrome_Move" Background="Transparent" BorderThickness="3" Foreground="Red" FontSize="15" BorderBrush="Red" Visibility="Collapsed" Margin="0,72,0,0" FontWeight="Bold">Move</Button>
+                        <Button Name="ChromeGreen" ToolTip="Swap" Click="Chrome_Move" Background="Transparent" BorderThickness="5" BorderBrush="SpringGreen" Visibility="Collapsed"></Button>
+                        <Border Name="ChromeRed" BorderBrush="Red" Background="Transparent" BorderThickness="5" Visibility="Collapsed"></Border>
+                    </Grid>
+                    <Grid Name="GridInternet" Grid.Column="3" Visibility="Collapsed">
+                        <Button Background="White" BorderBrush="Black" Name="Internet" BorderThickness="3" Click="Internet_Click" ToolTip="Internet Explorer">
+                            <Grid Height="64" Width="88">
+                                <Image  Source="/IE.png" HorizontalAlignment="Left" VerticalAlignment="Center" Height="82" Width="61" RenderTransformOrigin="0.48,0.772" Margin="11,-10,0,-8"/>
+                                <!--TextBlock x:Name="Text3" FontSize="10" TextWrapping="Wrap" Foreground="White" Margin="3,14,1,-37" Visibility="Visible" FontWeight="Bold" RenderTransformOrigin="0.5,0.5" Grid.Row="3" Text="Directory"></-->
+                            </Grid>
+                        </Button>
+                        <Button Name="InterDel" ToolTip="Delete" Click="Inter_Del" Background="Transparent" BorderThickness="3" Foreground="Red" FontSize="15" BorderBrush="Red" Visibility="Collapsed" Margin="0,0,0,72" FontWeight="Bold">Delete</Button>
+                        <Button Name="InterMove" ToolTip="Move" Click="Inter_Move" Background="Transparent" BorderThickness="3" Foreground="Red" FontSize="15" BorderBrush="Red" Visibility="Collapsed" Margin="0,72,0,0" FontWeight="Bold">Move</Button>
+                        <Button Name="InterGreen" ToolTip="Swap" Click="Inter_Move" Background="Transparent" BorderThickness="5" BorderBrush="SpringGreen" Visibility="Collapsed"></Button>
+                        <Border Name="InterRed" BorderBrush="Red" Background="Transparent" BorderThickness="5" Visibility="Collapsed"></Border>
+                    </Grid>
+                </Grid>
+            </ScrollViewer>
+        </Grid>
+        <Image Name="GrayB" Source="GrayB.png" Visibility="Collapsed" Opacity=".40"></Image>
+        <StackPanel Grid.Column="4" Canvas.Left="225" Canvas.Top="53" Width="202">
+            <ComboBox x:Name="combo1" Height="30" Margin="0,0,-119,0" Background="Black" SelectedValuePath="Name" IsDropDownOpen="True" Visibility="Collapsed" DropDownClosed="Combo1_DropDownClosed">
+                <ComboBoxItem ToolTip="Plex" Name="Cb1" VerticalContentAlignment="Center" FontSize="15" Height="35" Foreground="White" BorderBrush="Black" BorderThickness="2"  Background="White">
+                    <StackPanel Orientation="Horizontal" Width="309">
+                        <Image Source="Plex.png" Height="29" Width="313"></Image>
+                    </StackPanel>
+                </ComboBoxItem>
+                <ComboBoxItem ToolTip="Workday" Name="Cb2" VerticalContentAlignment="Center" FontSize="15" Height="35" Foreground="White" BorderBrush="Black" BorderThickness="2"  Background="White">
+                    <StackPanel Orientation="Horizontal" Width="309">
+                        <Image Source="Workday.png" Height="29" Width="314"/>
+                    </StackPanel>
+                </ComboBoxItem>
+                <ComboBoxItem ToolTip="ADP" Name="Cb3" VerticalContentAlignment="Center" FontSize="15" Height="35" Foreground="White" BorderBrush="Black" BorderThickness="2"  Background="White">
+                    <StackPanel Orientation="Horizontal" Width="309">
+                        <Image Source="ADP.png" Height="29" Width="312"></Image>
+                    </StackPanel>
+                </ComboBoxItem>
+                <ComboBoxItem ToolTip="Self Service" Name="Cb4" VerticalContentAlignment="Center" FontSize="15" Height="35" Foreground="White" BorderBrush="Black" BorderThickness="2"  Background="White">
+                    <StackPanel Orientation="Horizontal" Width="309">
+                        <TextBlock Width="97"></TextBlock>
+                        <Image Source="AmericanAxle.jpg" Height="29" Width="36"></Image>
+                        <TextBlock VerticalAlignment="Center" Foreground="Black" Width="86" RenderTransformOrigin="0.153,0.517" FontWeight="Bold">Self Service</TextBlock>
+                    </StackPanel>
+                </ComboBoxItem>
+                <ComboBoxItem ToolTip="PLM" Name="Cb5" VerticalContentAlignment="Center" FontSize="15" Height="35" Foreground="White" BorderBrush="Black" BorderThickness="2"  Background="White">
+                    <Grid>
+                        <Image Source="PLM.png" Margin="84,-6,-236,-4"/>
+                    </Grid>
+                </ComboBoxItem>
+                <ComboBoxItem ToolTip="Oracle" Name="Cb6" VerticalContentAlignment="Center" FontSize="15" Height="35" Foreground="White" BorderBrush="Black" BorderThickness="2"  Background="White">
+                    <Grid>
+                        <Image Source="Oracle.png" Margin="98,5,-54,5"/>
+                    </Grid>
+                </ComboBoxItem>
+                <ComboBoxItem ToolTip="Microsoft Office" Name="Cb7" VerticalContentAlignment="Center" FontSize="15" Height="35" Foreground="White" BorderBrush="Black" BorderThickness="2"  Background="White">
+                    <Grid>
+                        <Image Source="Office.png" Margin="78,-12,-246,-9"/>
+                    </Grid>
+                </ComboBoxItem>
+                <ComboBoxItem ToolTip="Installer" Name="Cb8" VerticalContentAlignment="Center" FontSize="15" Height="35" Foreground="White" BorderBrush="Black" BorderThickness="2"  Background="White">
+                    <Grid Width="73">
+                        <Image Source="Installer.png" Margin="78,3,-114,3"/>
+                        <TextBlock Foreground="Black" FontWeight="Bold" Margin="144,4,-144,-4">Installer</TextBlock>
+                    </Grid>
+                </ComboBoxItem>
+                <ComboBoxItem ToolTip="Visual Studio" Name="Cb9" VerticalContentAlignment="Center" FontSize="15" Height="35" Foreground="White" BorderBrush="Black" BorderThickness="2"  Background="White">
+                    <Grid Width="73">
+                        <Image Source="Visual.png" Margin="69,-7,-183,-8" RenderTransformOrigin="0.5,0.5">
+                            <Image.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="-0.191"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Image.RenderTransform>
+                        </Image>
+                    </Grid>
+                </ComboBoxItem>
+                <ComboBoxItem ToolTip="Calculator" Name="Cb10" VerticalContentAlignment="Center" FontSize="15" Height="35" Foreground="White" BorderBrush="Black" BorderThickness="2"  Background="White">
+                    <Grid Width="73">
+                        <Image Source="calc.png" Margin="70,3,-106,3"/>
+                        <TextBlock Foreground="Black" FontWeight="Bold" Margin="140,4,-140,-4">Calculator</TextBlock>
+                    </Grid>
+                </ComboBoxItem>
+                <ComboBoxItem ToolTip="Notepad" Name="Cb11" VerticalContentAlignment="Center" FontSize="15" Height="35" Foreground="White" BorderBrush="Black" BorderThickness="2"  Background="White">
+                    <Grid Width="73">
+                        <Image Source="notepad.png" Margin="70,3,-106,3"/>
+                        <TextBlock Foreground="Black" FontWeight="Bold" Margin="140,4,-140,-4">Notepad</TextBlock>
+                    </Grid>
+                </ComboBoxItem>
+                <ComboBoxItem ToolTip="Google Chrome" Name="Cb12" VerticalContentAlignment="Center" FontSize="15" Height="35" Foreground="White" BorderBrush="Black" BorderThickness="2"  Background="White">
+                    <Grid Width="73">
+                        <Image Source="chrome.png" Margin="69,3,-105,3"/>
+                        <TextBlock Foreground="Black" FontWeight="Bold" Margin="140,4,-140,-4">Chrome</TextBlock>
+                    </Grid>
+                </ComboBoxItem>
+                <ComboBoxItem ToolTip="Internet Explorer" Name="Cb13" VerticalContentAlignment="Center" FontSize="15" Height="35" Foreground="White" BorderBrush="Black" BorderThickness="2"  Background="White">
+                    <Grid Width="73">
+                        <Image Source="IE.png" Margin="43,3,-79,3"/>
+                        <TextBlock Foreground="Black" FontWeight="Bold" Margin="113,4,-169,-4">Internet Explorer</TextBlock>
+                    </Grid>
+                </ComboBoxItem>
+            </ComboBox>
+        </StackPanel>
+        <Image Source="Metals.jpg" Grid.ColumnSpan="2" Canvas.Left="-265" Canvas.Top="-877" />
+        <Image Source="/AAMMetalForming_LogoTM-White.png" Grid.ColumnSpan="2" Canvas.Left="-1" />
+        <Button Canvas.Top="20" Background="White" Canvas.Left="720" Name="Edit" ToolTip="Edit" Click="Edit_Click">
+            <Image Source="Edit.png" Height="41" Canvas.Top="168" Width="41" Canvas.Left="488"></Image>
+        </Button>
+        <TextBlock Name="IconText" FontWeight="Bold" Visibility="Collapsed" Foreground="White" Canvas.Left="564" Canvas.Top="15">Icon Size:</TextBlock>
+        <ComboBox Name="IconSize" DropDownClosed="IconClosed" Visibility="Collapsed" Canvas.Left="564" Canvas.Top="31" Width="96">
+            <ComboBoxItem>Small</ComboBoxItem>
+            <ComboBoxItem>Medium</ComboBoxItem>
+            <ComboBoxItem>Large</ComboBoxItem>
+        </ComboBox>
+    </Canvas>
+
+</Window>

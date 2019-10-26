@@ -1,0 +1,20 @@
+﻿<Window x:Class="AAMPCList.PlexOpt"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AAMPCList"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        Title="PlexOpt" Height="920" Width="810">
+    <Grid>
+        <Button BorderThickness="3" Click="PlexClick1" Margin="0,0,0,460">
+            <Image Source="/PlexOld.png" Height="458" Width="801"></Image>
+        </Button>
+        <Button BorderThickness="3" Click="PlexClick2" Margin="0,460,0,0">
+            <Image Source="/NewPlex.png" Height="460" Width="841"></Image>
+        </Button>
+    </Grid>
+</Window>

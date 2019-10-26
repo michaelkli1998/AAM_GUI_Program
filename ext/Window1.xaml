@@ -1,0 +1,34 @@
+﻿<Window x:Class="AAMPCList.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AAMPCList"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Background="White"
+        Title="Microsoft Office" Height="298" Width="405">
+    <Grid>
+        <Image Source="MicrosoftOffice.png"/>
+        <Button Click="word_click" ToolTip="Microsoft Word" BorderBrush="Black" BorderThickness="1" Name="Word" Background="Transparent" Margin="0,0,259,129">
+            <Image Source="Word.png" Height="139" Width="138"></Image>
+        </Button>
+        <Button Click="excel_click" ToolTip="Microsoft Excel" BorderBrush="Black" BorderThickness="1" Name="Excel" Background="Transparent" Margin="130,0,129,129">
+            <Image Source="excel.png" Height="135" Width="159"></Image>
+        </Button>
+        <Button Click="powerpoint_click" ToolTip="Microsoft Powerpoint" BorderBrush="Black" BorderThickness="1" Name="Powerpoint" Background="Transparent" Margin="259,0,0,129">
+            <Image Source="powerpoint.png" Height="138" Width="138"></Image>
+        </Button>
+        <Button Click="outlook_click" ToolTip="Microsoft Outlook" BorderBrush="Black" BorderThickness="1" Name="Outlook" Background="Transparent" Margin="0,130,259,-1">
+            <Image Source="outlook.png" Height="128" Width="135"></Image>
+        </Button>
+        <Button Click="onenote_click" ToolTip="Microsoft OneNote" BorderBrush="Black" BorderThickness="1" Name="OneNote" Background="Transparent" Margin="130,130,129,-1">
+            <Image Source="onenote.png" Height="133" Width="135"></Image>
+        </Button>
+        <Button Click="skype_click" ToolTip="Microsoft Skype" BorderBrush="Black" BorderThickness="1" Name="Skype" Background="Transparent" Margin="259,130,0,-1">
+            <Image Source="skype.png" Height="133" Width="139"></Image>
+        </Button>
+    </Grid>
+
+</Window>
